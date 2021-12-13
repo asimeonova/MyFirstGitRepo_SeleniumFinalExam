@@ -12,19 +12,15 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Set;
 
-public class GiftVoucherTest {
-   WebDriver driver;
+public class GiftVoucherTest extends BaseClass{
 
    @BeforeMethod
-    public void setUp(){
-       System.setProperty("webdriver.chrome.driver","C:\\Users\\00. BrowserDrivers\\chromedriver.exe" );
-       driver = new ChromeDriver();
-       driver.manage().window().maximize();
+    public void goToPage(){
        driver.get("http://shop.pragmatic.bg/admin/");
    }
 
    @Test
-   public void giftVoucher(){
+   public  void giftVoucher(){
        // log into the system
        WebElement username=driver.findElement(By.cssSelector("#input-username"));
        username.sendKeys("admin15");
@@ -64,8 +60,5 @@ public class GiftVoucherTest {
 
    }
 
-   @AfterMethod
-   public void quitBrowser(){
-     driver.quit();
-   }
+
 }
