@@ -12,7 +12,7 @@ import org.testng.annotations.Test;
 import java.util.List;
 import java.util.Set;
 
-public class ShopPragmaticTest {
+public class GiftVoucherTest {
    WebDriver driver;
 
    @BeforeMethod
